@@ -1,9 +1,9 @@
 /*회원가입*/
 $(document).ready(function() {
+    // 회원가입
     $("#success").click(function(event) {
-        event.preventDefault(); // 기본 동작 중단
+        event.preventDefault();
 
-        // 입력값 확인
         var id = $("input[name='id']").val();
         var name = $("input[name='name']").val();
         var password = $("input[name='password']").val();
@@ -19,22 +19,18 @@ $(document).ready(function() {
             return;
         }
 
-        // 중복 검사 결과 확인
         var result_checkId = $("#result_checkId").text();
         if (result_checkId !== "사용 가능한 아이디입니다.") {
             alert("아이디 중복 검사 후 가입 버튼을 눌러주세요.");
             return;
         }
 
-        // 회원가입 데이터를 서버로 전송
         $.ajax({
             type: "POST",
             url: "join.do",
             data: $("form").serialize(),
             success: function(response) {
-                // 회원가입 완료 후 알림 표시
                 alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
-                // 로그인 페이지로 이동
                 window.location.href = "login.do"; 
             },
             error: function(xhr, status, error) {
@@ -42,6 +38,37 @@ $(document).ready(function() {
             }
         });
     });
+
+    // 아이디 입력 필드에 이벤트 리스너 추가
+    $("#id").on("input", function() {
+        var koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+        if (koreanRegex.test(this.value)) {
+            alert("한글 입력 불가");
+            this.value = this.value.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, "");
+        } else {
+            this.value = this.value.replace(/[^a-zA-Z0-9@.]/g, "");
+        }
+    });
+    
+           $("#name").on("input", function() {
+
+        // 영문과 한글만 입력 가능하게 함
+        if (/[^a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣]/.test(this.value)) {
+            alert("영문 또는 한글만 입력 가능합니다.");
+            this.value = this.value.replace(/[^a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣]/g, "");
+        }
+
+        if (this.value.length > 10) {
+            this.value = this.value.substring(0, 10);
+        }
+
+    });
+
+    
+
+});
+
+
     
     
     
@@ -75,7 +102,7 @@ $(document).ready(function() {
             }
         });
     });
-});
+
 
 /*게시물 수정*/
 $(document).ready(function() {

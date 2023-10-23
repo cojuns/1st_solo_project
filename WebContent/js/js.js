@@ -39,7 +39,7 @@ $(document).ready(function() {
         });
     });
 
-    // 아이디 입력 필드에 이벤트 리스너 추가
+    // 한글 입력 불가
     $("#id").on("input", function() {
         var koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
         if (koreanRegex.test(this.value)) {
@@ -64,14 +64,9 @@ $(document).ready(function() {
 
     });
 
-    
-
-});
 
 
-    
-    
-    
+
 		/*아이디 중복 검사*/
     $("#checkId").click(function() {
         let id = $("#id").val();
@@ -102,6 +97,15 @@ $(document).ready(function() {
             }
         });
     });
+    
+
+});
+
+
+    
+    
+    
+
 
 
 /*게시물 수정*/

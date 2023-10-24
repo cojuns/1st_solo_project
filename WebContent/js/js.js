@@ -201,7 +201,7 @@ $(document).ready(function() {
    
                     alert("게시글이 등록되었습니다.");
                     // 성공적으로 등록되었으면 페이지 이동
-                    window.location.href = "listArticle.jsp";
+                    window.location.href = "list.do";
                 
             },
             

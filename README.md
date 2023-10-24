@@ -1,7 +1,9 @@
-# 1st_solo_project
-### 스프링 MVC 프레임워크 프로젝트
+
+# 스프링 MVC 프레임워크 프로젝트
 ## 회원제 게시판 
+-------------------------------
 ### 개요
+--------------------------------
 - 개발 인원 : 1명
 - 개발 기간 : 2023-08-14 ~ 2023-08-18
 - 주요 기능 :
@@ -25,6 +27,8 @@
 ---------------------------
 
 ### 요구사항 분석
+
+---------------------------
 
 #### 로그인 페이지
 - 로그인을 하지 않은 경우 아래 페이지만 이용가능
@@ -74,6 +78,61 @@
 ----------------------------------
 
 ### DB 설계
+
+-------------------------------
+![ERD](https://github.com/cojuns/1st_solo_project/assets/122452171/fefda7e7-ed81-45ea-b2a3-5b1e0e7ad727)
+![member](https://github.com/cojuns/1st_solo_project/assets/122452171/87165826-a52e-4068-85f3-001f2a72203e)
+![article](https://github.com/cojuns/1st_solo_project/assets/122452171/f7b8ae61-db7c-4681-88a8-8f48eff83660)
+![article_no](https://github.com/cojuns/1st_solo_project/assets/122452171/3a184cf6-f2d2-4fac-9d9a-86f25f1763da)
+
+
+----------------------------------
+
+### API 설계
+
+--------------------------------
+
+![회원관련_API](https://github.com/cojuns/1st_solo_project/assets/122452171/ce16e84e-bce8-4c3b-9cff-0bc912c15a51)
+
+![게시글관련_API](https://github.com/cojuns/1st_solo_project/assets/122452171/b415b4e3-b95d-4981-b568-11500a640efb)
+
+
+----------------------------------
+
+## 실행 화면
+
+--------------------------------
+
+### 회원 관련
+<details>
+  <summary>더보기</summary>
+#### 회원가입
+
+https://github.com/cojuns/1st_solo_project/assets/122452171/7aa6c0aa-becc-4c18-ba6b-0a167bfeac94
+
+#### 로그인
+
+https://github.com/cojuns/1st_solo_project/assets/122452171/cc349500-d66a-48e3-bf27-5779be1f253a
+
+#### 암호변경, 로그아웃
+
+https://github.com/cojuns/1st_solo_project/assets/122452171/c55d8b29-96b0-4992-9e77-551a2fd832be
+
+
+</details>
+
+----------------------------
+
+### 게시판
+
+<details>
+  <summary>더보기</summary>
+
+https://github.com/cojuns/1st_solo_project/assets/122452171/894bcd3e-3bc6-46b0-bf52-5eee34c65cbc
+
+</details>
+
+
 
 
 
